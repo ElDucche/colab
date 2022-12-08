@@ -1,21 +1,16 @@
 import Head from 'next/head'
 import React from 'react'
 import Header from './header'
-// import { TodoMenu } from './todoMenu'
+// import {TodoMenu} from './todoMenu'
 
 const Layout = ({ children}: any) => {
   return (
-    <div className='h-full'>
+    <div className='h-full bg-base-200'>
         <Head>
             <title>To Do app</title>
         </Head>
         <Header />
-        <div className='flex gap-4'>
-            {/* <TodoMenu /> */}
-            <div className='p-4'>
-                {children}
-            </div>
-        </div>
+        {children}
     </div>
   )
 }

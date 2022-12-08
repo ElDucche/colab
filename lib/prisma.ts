@@ -1,13 +1,27 @@
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from '@prisma/client'
 
-interface CustomNodeJsGlobal extends NodeJS.Global {
-	prisma: PrismaClient;
+
+declare global {
+
+  // allow global `var` declarations
+
+  // eslint-disable-next-line no-var
+
+  var prisma: PrismaClient | undefined
+
 }
 
-declare const global: CustomNodeJsGlobal;
 
-const prisma = global.prisma || new PrismaClient();
+export const prisma =
 
-if (process.env.NODE_ENV === 'development') global.prisma = prisma;
+  global.prisma ||
 
-export default prisma;
+  new PrismaClient({
+
+    log: ['query'],
+
+  })
+
+
+if (process.env.NODE_ENV !== 'production') global.prisma = prisma
+

@@ -5,7 +5,7 @@ import {HiOutlineBell} from 'react-icons/hi2'
 const Header = () => {
   const [count, setCount] = useState(0);
   return (
-    <div className='navbar bg-base-100 border-b pr-6 my-2'>
+    <div className='navbar bg-base-100 border-b pr-6 pt-4'>
         <div className='flex-1'>
           <a href={"/"} className='btn btn-ghost'>
             <svg width="100" height="50" viewBox="0 0 349 188" fill="none" xmlns="http://www.w3.org/2000/svg">
