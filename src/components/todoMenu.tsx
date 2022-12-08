@@ -1,27 +1,22 @@
+// import Link from "next/link"
 
-import { useEffect, useState } from "react";
-import prisma from "../../lib/prisma"
-
-// export const TodoMenu = () => {
-//     const [todos, setTodos]: any[] = useState([]);
-
-//     useEffect(() => {
-//         async () => {
-//         await prisma.todo.findMany()
-//         .then(res => setTodos(res))
-//     }}, []) 
+// // @ts-ignore
+// const TodoMenu = (todos?: any) => {
+//     const menuItems = [...todos]
 //   return (
 //     <div className="">
-//         <ul className="menu bg-base-100 w-40 md:w-56 border-r border-b border-base-content">
+//         <ul className="menu bg-base-200 w-40 md:w-56 border-r border-base-content h-screen">
 //             {
-//                 todos.map((todo: any) => 
+//                 todos.map((todo: any, i: number) => 
 //                     (
-//                         <li key={todo.id}><a href={`/todo/${todo.id}`}> {todo.title} </a></li>
+//                         <li key={i}><Link href={`/todo/${todo.id}`}> {todo.title} </Link></li>
 //                     )
 //                 )
 //             }
-//             <li><a>Item</a></li>
+//             <li><button className="btn btn-primary">Add a To do</button></li>
 //         </ul>
 //     </div>
 //   )
 // }
+
+// export default TodoMenu;
